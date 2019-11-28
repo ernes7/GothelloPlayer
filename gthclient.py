@@ -207,10 +207,16 @@ class GthClient(object):
         Send a line to the server.
         """
 
+
+        #print(
+        #    msg_text,
+        #   file=self.fsock_out,
+        #    end="\r\n",
+        #)
+
         print(
             msg_text,
-            file=self.fsock_out,
-            end="\r\n",
+            self.fsock_out
         )
         self.fsock_out.flush()
 
