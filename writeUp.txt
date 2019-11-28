@@ -1,0 +1,16 @@
+Ernesto Martinez
+CS 441 - AI
+ernes@pdx.edu
+Fall 19
+
+What did you try to do?
+How well did it work?
+How did you evaluate your work?
+What did you learn?
+What would you like to try in the future?
+How do I reproduce your work (compile, run test)?
+
+changes to original files:
+white_time_control to self.white_time_control
+
+
