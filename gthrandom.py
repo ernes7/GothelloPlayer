@@ -12,6 +12,7 @@ opp = gthclient.opponent(me)
 
 client = gthclient.GthClient(me, "barton.cs.pdx.edu", 0)
 
+
 def letter_range(letter):
     for i in range(5):
         yield chr(ord(letter) + i)
