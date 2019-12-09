@@ -4,7 +4,8 @@ ernes@pdx.edu
 Fall 19
 
 What did you try to do?
-- Minimax score search in Python
+- Minimax score search in Python. I added functions max and min to Bart's code in gthrandom.python
+Using these functions, I was able to predict moves and return the best move possible based on a score.
 How well did it work?
 - I faced a lot of illegal moves at the beginning of the implmentation
 but it got better after adjustments. I realized that I didnt twisted the logic
@@ -12,6 +13,31 @@ going from the max function to the min function and that was the main cause.
 How did you evaluate your work?
 I evaluated my work through the playing of games and checking
 if the minimax won or lost. 
+
+I counted situations like this, a win in my favor vs the client:
+
+(...)
+me: a5
+O*O*.
+OOO**
+O.OO*
+***O*
+*.O.*
+opp: d5
+O*O*.
+OOO**
+O.OO*
+***O*
+*.OO*
+me: b3
+O*O*.
+OOO**
+O*OO*
+***O*
+*.OO*
+opp: pass
+me: pass to end game
+
 What did you learn?
 I learn about Minimax and also I read articles on Alpha Beta Pruning
 which is a improved version. Altough I didnt implement Alpha Beta Pruning,

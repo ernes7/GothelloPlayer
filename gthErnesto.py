@@ -40,7 +40,6 @@ def show_position():
 side = "black"
 
 
-# *****************************MY CODE STARTS HERE*********************
 #positions to move around:
 posDigit = 0
 posLetter = 0
@@ -55,9 +54,9 @@ def max():
 
     for digit in letter_range('1'):
         for letter in letter_range('a'):
-            if position[digit][letter] == '.':
+            if grid[digit][letter] == '.':
                 #if nothing we play black and call min()
-                position[digit][letter] = '*' #black
+                grid[digit][letter] = '*' #black
                 (move, minDigit, minLetter) = min()
 
                 # Adjusting max score after return
@@ -68,7 +67,7 @@ def max():
 
                 # After we know the max score for the move, 
                 # the location is set back to what it was
-                position[digit][letter] = '.'
+                grid[digit][letter] = '.'
     return (maxScore,posDigit,posLetter)
 
        
@@ -85,21 +84,21 @@ def min():
     ClientLetter = 0
 
     for digit in letter_range('1'):
-    for letter in letter_range('a'):
-        if position[digit][letter] == '.':
-            # simulates client move to get score
-            position[digit][letter] = 'O' #white
-            (move, maxDigit, maxLetter) = max()
+        for letter in letter_range('a'):
+            if grid[digit][letter] == '.':
+                # simulates client move to get score
+                grid[digit][letter] = 'O' #white
+                (move, maxDigit, maxLetter) = max()
 
-            # Adjusting max score after return
-            if move < minScore:
-                maxScore = move
-                ClientDigit = digit
-                ClientLetter = letter
+                # Adjusting max score after return
+                if move < minScore:
+                    minScore = move
+                    ClientDigit = digit
+                    ClientLetter = letter
 
             # After we know the min score for the move, 
             # the location is set back to what it was
-            position[digit][letter] = '.'
+                grid[digit][letter] = '.'
     return (minScore,ClientDigit,ClientLetter)
 
 
@@ -108,9 +107,8 @@ while True:
     if side == me:
         #move = random.choice(list(board))
         (move, posDigit,posLetter) = max() # get max possible score
-        position[posDigit][posLetter] = '*' # black move in the position
+        grid[posDigit][posLetter] = '*' # black move in the position
 
-# *****************************MY CODE ENDS HERE*********************
         print("me:", move)
         try:
             client.make_move(move)
