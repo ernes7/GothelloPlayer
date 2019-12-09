@@ -62,8 +62,8 @@ def max():
                 # Adjusting max score after return
                 if move > maxScore:
                     maxScore = move
-                    posDigit = digit
-                    posLetter = letter
+                    posDigit = minDigit
+                    posLetter = minLetter
 
                 # After we know the max score for the move, 
                 # the location is set back to what it was
@@ -93,8 +93,8 @@ def min():
                 # Adjusting max score after return
                 if move < minScore:
                     minScore = move
-                    ClientDigit = digit
-                    ClientLetter = letter
+                    ClientDigit = maxDigit
+                    ClientLetter = maxLetter
 
             # After we know the min score for the move, 
             # the location is set back to what it was

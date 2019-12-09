@@ -6,6 +6,9 @@ Fall 19
 What did you try to do?
 - Minimax score search in Python. I added functions max and min to Bart's code in gthrandom.python
 Using these functions, I was able to predict moves and return the best move possible based on a score.
+The function max() always predicted a move ahead and based on that tree branch, it returns a score to be used later.
+The function then evaluates the possible scores and return the max with arguments letter and digit to make a move there.
+The function min tries to minimize the score of the opponent, and works the same way but in reverse. 
 How well did it work?
 - I faced a lot of illegal moves at the beginning of the implmentation
 but it got better after adjustments. I realized that I didnt twisted the logic
@@ -45,6 +48,7 @@ It probably would of work better that way
 What would you like to try in the future?
 I would like to try minimax AB Pruning in other board games. 
 How do I reproduce your work (compile, run test)?
+it uses barton.cs.pdx.edu and run this way : python3 gthErnesto.py black
 
 
 References to Learn about minimax and Alpha Beta Pruning:
