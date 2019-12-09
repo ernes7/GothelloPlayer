@@ -4,13 +4,26 @@ ernes@pdx.edu
 Fall 19
 
 What did you try to do?
+- Minimax score search in Python
 How well did it work?
+- I faced a lot of illegal moves at the beginning of the implmentation
+but it got better after adjustments. I realized that I didnt twisted the logic
+going from the max function to the min function and that was the main cause.
 How did you evaluate your work?
+I evaluated my work through the playing of games and checking
+if the minimax won or lost. 
 What did you learn?
+I learn about Minimax and also I read articles on Alpha Beta Pruning
+which is a improved version. Altough I didnt implement Alpha Beta Pruning,
+It probably would of work better that way
 What would you like to try in the future?
+I would like to try minimax AB Pruning in other board games. 
 How do I reproduce your work (compile, run test)?
 
-changes to original files:
-white_time_control to self.white_time_control
 
-
+References to Learn about minimax and Alpha Beta Pruning:
+https://en.wikipedia.org/wiki/Minimax
+https://stackabuse.com/minimax-and-alpha-beta-pruning-in-python/
+https://brilliant.org/wiki/minimax/
+https://www.baeldung.com/java-minimax-algorithm
+https://www.hackerearth.com/blog/developers/minimax-algorithm-alpha-beta-pruning/
