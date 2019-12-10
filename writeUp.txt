@@ -8,14 +8,24 @@ What did you try to do?
 Using these functions, I was able to predict moves and return the best move possible based on a score.
 The function max() always predicted a move ahead and based on that tree branch, it returns a score to be used later.
 The function then evaluates the possible scores and return the max with arguments letter and digit to make a move there.
-The function min tries to minimize the score of the opponent, and works the same way but in reverse. 
+The function min() tries to minimize the score of the opponent, and works the same way but in reverse. 
+In a separate folder I tried to add a scoring function but I was not able due to game restrictions and rules
+that I did not have in mind.
+For example, the scoring function was difficult to implement due to the program not applying
+the "capture" rule of the gothello game. In other words, I was not able to flip the tiles.
+
 How well did it work?
 - I faced a lot of illegal moves at the beginning of the implmentation
 but it got better after adjustments. I realized that I didnt twisted the logic
-going from the max function to the min function and that was the main cause.
+going from the max function to the min function and that was the main cause. 
+Also, as I explained before, the scoring function was not implemented fully due to
+my code not able to figure out how to simulate the "flip the tiles" scenario. I ended up
+deleting the scoring function.
+
 How did you evaluate your work?
 I evaluated my work through the playing of games and checking
-if the minimax won or lost. 
+if the minimax won or lost. My initial idea of evalutation was to
+implement a scoring function.
 
 I counted situations like this, a win in my favor vs the client:
 
@@ -39,14 +49,22 @@ O*OO*
 ***O*
 *.OO*
 opp: pass
-me: pass to end game
+me: pass to end game.
+
+In that case, my player wins 12-11 (tiles counting) vs the python client.
 
 What did you learn?
 I learn about Minimax and also I read articles on Alpha Beta Pruning
-which is a improved version. Altough I didnt implement Alpha Beta Pruning,
-It probably would of work better that way
+which is a improved version. Altough I fully didnt implement Alpha Beta Pruning,
+It probably would of work better that way. I also learned about Gothello, it was really
+interesting to interact and play a game made by Bart Massey, this is something unique
+that gives the students some motivation when doing the assignment. 
+
 What would you like to try in the future?
-I would like to try minimax AB Pruning in other board games. 
+I would like to try minimax AB Pruning in other board games.
+Also, it will interesting to apply a learner given data of played games.
+Definetely an interesting approach.  
+
 How do I reproduce your work (compile, run test)?
 it uses barton.cs.pdx.edu and run this way : python3 gthErnesto.py black
 
